@@ -34,13 +34,6 @@
  */
 char* AK_check_view_name(char *name);
 
-/**
- * @author Kresimir Ivkovic
- * @brief Function that finds an object's id by its name
- * @param name name of the view
- * @return View's id or EXIT_ERROR
- */
-int AK_get_view_obj_id(char *name);
 
 /**
  * @author Kresimir Ivkovic
@@ -53,14 +46,6 @@ int AK_get_view_obj_id(char *name);
  * @return Id of the newly inserted view
  */
 int AK_view_add(char *name, char *query, char *rel_exp, int set_id);
-
-/**
- * @author Kresimir Ivkovic
- * @brief Function that  removes the view by its object id
- * @param obj_id object id of the view
- * @return Result of AK_delete_row for the view (success or error)
- */
-int AK_view_remove_by_obj_id(int obj_id);
 
 /**
  * @author Kresimir Ivkovic
@@ -92,7 +77,6 @@ int AK_view_change_query(char *name, char *query, char *rel_exp);
 TestResult AK_view_test();
 
 char* AK_get_view_query(char *name);
-char* AK_get_rel_exp(char *name);
 
 
 #endif
